@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Memories</title>
+    <style>
+      body {
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: rgb(192, 222, 247);
+      }
+
+      #memories-container {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          font-family: 'Arial', sans-serif;
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 10px;
+      }
+
+      h1 {
+          color: #333;
+          font-size: 36px;
+          margin: 0;
+      }
+
+      
+      #dancing-images {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #dancing-images img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            animation: dance 3s infinite alternate;
+        }
+        #one {
+          padding-left: 100%;
+        }
+
+      @keyframes dance {
+          0% { transform: translateY(100px); }
+          100% { transform: translateY(-100px); }
+      }
+  </style>
+</head>
+<body>
+    <button id="memories-container">
+        <h1>Beautiful Memories</h1>
+    </button>
+
+    <div id="dancing-images">
+      <img id="one" src="../../images/humans/together/us3.jpg" alt="Dancing Image 1">
+      <img id="2" src="../../images/humans/together/us2.jpg" alt="Dancing Image 2">
+      
+    </div>
+
+    <script src="../scripts/effect.js"></script>
+</body>
+</html>
+
+
+
+
+
+
